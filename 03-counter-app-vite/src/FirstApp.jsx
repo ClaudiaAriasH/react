@@ -10,30 +10,23 @@
   }
   */
 
+//Usando el sinonimo de un fragmento
 
-  //Usando el sinonimo de un fragmento 
+//JSON.stringify imprime objetos
 
-  
-  //JSON.stringify imprime objetos
-
-
-  //solo se permite hacer esto con funciones sincronas, no funciona con async
-  const getUser = () => {
-    return {
-      id: 123,
-      username: "SashaA",
-    };
+//solo se permite hacer esto con funciones sincronas, no funciona con async
+const getUser = () => {
+  return {
+    id: 123,
+    username: "SashaA",
   };
+};
 
-
-  export const FirstApp = () => {
-    return (
-      <>
-      <h1>First App, {getUser().username}.</h1>
-      <p>App de ejemplo del curso.</p>
-      </>
-    )
-  }
-  
-  
-  
+export const FirstApp = ({ title, subtitle }) => {
+  return (
+    <>
+      <h1>{title}.</h1>
+      <p>App de ejemplo del curso. {subtitle} </p>
+    </>
+  );
+};

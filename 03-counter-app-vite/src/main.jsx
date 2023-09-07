@@ -6,6 +6,6 @@ import './styles.css';
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <FirstApp />
+    <FirstApp  title="First App" subtitle={ 1 }/>
   </React.StrictMode>
 );
