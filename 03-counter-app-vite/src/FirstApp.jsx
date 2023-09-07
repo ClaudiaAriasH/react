@@ -15,16 +15,12 @@
 //JSON.stringify imprime objetos
 
 //solo se permite hacer esto con funciones sincronas, no funciona con async
+
 import PropTypes from 'prop-types';
 
-const getUser = () => {
-  return {
-    id: 123,
-    username: "SashaA",
-  };
-};
 
-export const FirstApp = ({ title, subtitle }) => {
+
+export const FirstApp = ({ title, subtitle, name }) => {
 
 
   if ( !title ) {
@@ -34,7 +30,7 @@ export const FirstApp = ({ title, subtitle }) => {
   return (
     <>
       <h1>{title}.</h1>
-      <p>App de ejemplo del curso. {subtitle} </p>
+      <p>App de ejemplo del curso. {subtitle} de {name} </p>
     </>
   );
 };
@@ -43,5 +39,12 @@ export const FirstApp = ({ title, subtitle }) => {
 FirstApp.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.number
+
+};
+
+FirstApp.defaultProps = {
+  title: 'Hola, First App',
+  subtitle: 1,
+  name: 'Sasha'
 
 };
