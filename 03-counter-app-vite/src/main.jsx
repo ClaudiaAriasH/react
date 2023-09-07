@@ -5,6 +5,6 @@ import './styles.css';
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <CounterApp  title="Counter App" value={ 1 }/>
+    <CounterApp  title="Counter App." value={ 1 }/>
   </React.StrictMode>
 );

@@ -6,3 +6,12 @@ body {
   font-size: 1.3rem;
   padding: 70px;
 }
+
+
+button {
+  background-color: wheat;
+  border-color: wheat;
+  color: gray;
+  padding: 15px;
+  font-size: 1.3rem;
+}
