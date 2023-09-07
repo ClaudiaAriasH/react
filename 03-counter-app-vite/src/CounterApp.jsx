@@ -1,19 +1,36 @@
 import PropTypes from "prop-types";
+import { useState } from "react";
 
 export const CounterApp = ({ title, value }) => {
 
 
-const handleAdd = (event, newValue)  => { 
-    console.log(event) 
+const [ counter, setCounter ] = useState( value );
+
+
+const handleAdd = () => {
+  //setCounter( counter + 1 );
+  setCounter((c) => c + 1);
 };
+
+const handleSubtract = () => {
+  setCounter((c) => c - 1);
+};
+
+const handleReset = () => setCounter(value);
 
 
   return (
     <>
       <h1> { title } </h1>
-      <h2> Value: { value } </h2>
-      <button onClick={ (event) => handleAdd(event, value)  }>
+      <h2> Value: { counter } </h2>
+      <button onClick={ handleAdd }>
         +1
+      </button>
+      <button onClick={ handleSubtract }>
+        -1
+      </button>
+      <button onClick={ handleReset }>
+        Reset
       </button>
     </>
   );
