@@ -15,6 +15,8 @@
 //JSON.stringify imprime objetos
 
 //solo se permite hacer esto con funciones sincronas, no funciona con async
+import PropTypes from 'prop-types';
+
 const getUser = () => {
   return {
     id: 123,
@@ -23,10 +25,23 @@ const getUser = () => {
 };
 
 export const FirstApp = ({ title, subtitle }) => {
+
+
+  if ( !title ) {
+    throw new Error('El title no existe.');
+  }
+
   return (
     <>
       <h1>{title}.</h1>
       <p>App de ejemplo del curso. {subtitle} </p>
     </>
   );
+};
+
+
+FirstApp.propTypes = {
+  title: PropTypes.string.isRequired,
+  subtitle: PropTypes.number
+
 };
