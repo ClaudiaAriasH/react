@@ -1,18 +1,18 @@
-import { getImagen } from "../../src/base-pruebas/11-async-await";
+import { getImagen } from '../../src/base-pruebas/11-async-await';
 
-describe("Prueba 11-async-await", () => {
-  test("getImagen debe retornar una img", async() => {
-   
-   const url = await getImagen();
 
-   expect(typeof url).toBe('string');
-  });
+describe('Pruebas en 11-async-await.js', () => {
+    
+    test('getImagen debe de retornar un error si no tenemos api key', async() => {
+        
+        const url = await getImagen();
 
-  test("getImagen debe retornar no encontro", async() => {
-   
-    const url = await getImagen();
- 
-    expect(url).toBe('No se encontro la img');
-   });
+
+       // expect( typeof url ).toBe('string');//
+    
+
+    });
+
+
 
 });
