@@ -10,10 +10,11 @@ export const Message = () => {
             // const coords = { x, y };
             setCoords({ x, y })
         }
-
+        //add use effect
         window.addEventListener( 'mousemove', onMouseMove );
         
       return () => {
+        //cleanup use effect
         window.removeEventListener( 'mousemove', onMouseMove );
       }
     }, []);
