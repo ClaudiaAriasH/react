@@ -6,6 +6,8 @@ export const Quote = ({ author, quote }) => {
   const pRef = useRef();
   const [boxSize, setBoxSize] = useState({ width: 0, height: 0 })
 
+
+  //useLayoutEffect para obtener el tamaño del texto
   useLayoutEffect(() => {
     
     const { height, width } =  pRef.current.getBoundingClientRect();
